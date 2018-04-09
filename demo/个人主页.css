@@ -1,0 +1,258 @@
+*{
+    margin: 0;padding: 0;
+    font-family: 微软雅黑;
+    text-align: center;
+}
+body{
+    /* background-color: white; */
+    background-color:rgb(123, 215, 238);
+    background-size:cover;
+}
+/* div{border: none;} */
+
+
+.greet{
+    background-color: lightblue;
+    /* border:none; */
+    border-radius: 16px;
+    opacity: 0.5;
+    width:80%;height:50px;
+    position: absolute;
+    top: -60px;left: 50%;
+    transform: translate(-50%,0);
+    text-align: center;
+    line-height: 50px;
+    animation-name:inout;
+    animation-duration:1s;
+    animation-direction:alternate;
+    animation-iteration-count:2;
+    animation-fill-mode: forwards;
+}
+/* 滑入/滑出动画 */
+@keyframes inout{
+    from{top:-60px;}
+    to{top:0px;}
+}
+
+
+.right{                             /* 信息栏 */        
+    background-color: lightslategrey;
+    border:none;
+    border-radius: 16px;
+    width:50px;height:100px;
+    transform: skewX(30deg);                   /*倾斜效果*/
+    line-height: 25px;
+    display: inline-block;
+    float: right;
+    margin-right: 13%;
+    margin-top: 20px;
+}
+.right li{list-style: none;}
+
+.information{                       /*信息*/
+    width:30%;height:100px;
+    border-radius: 16px;                               
+    position: absolute;
+    top:20px;left:10%;
+    display: flex;
+    flex-flow: row nowrap;                      /*flex对齐*/
+    justify-content:space-between;
+    background-color:lightcyan;
+}
+.information img{                   /*图片*/          
+    width:100px;height:100px;
+    border-radius: 16px;
+}
+.information :nth-child("div"){
+    width:2px;height: 80px;
+    background-color: black;
+    align-self: center;
+    
+}
+.information ul{
+    border:none;
+    align-self: center;
+}
+.information ul li{
+    text-align: left;
+    list-style-type: square;
+}                         
+                               
+.left{                          /*票圈标题*/
+    background-color: lightslategrey;                    
+    width:50px;height:100px;
+    position: absolute;
+    top:290px;left:13%;
+    line-height: 50px;
+    border:none;
+    border-radius: 16px;
+    transform: skewX(-30deg);
+}
+.left li{list-style: none;}
+
+.friends{                      /*票圈*/
+    background-color:lightcyan;
+    border:none;
+    border-radius: 16px;
+    width:60%;height:400px;
+    position: absolute;
+    top:140px;right: 10%;
+}
+.friends div{
+    width:100px;height:100px;
+    border: none;
+    border-radius: 16px;
+    line-height: 100px;
+    text-align: center;
+    
+}
+.friends div img{
+    width:100%;height: 100%;
+    border-radius: 16px;
+}
+.show1{
+    position: absolute;top:0px;left:0px;
+}
+.show1:hover{
+    animation-name:show;
+    animation-duration: 2s;
+    animation-fill-mode: forwards;
+}
+@keyframes show{
+    0%{
+        width:100px;height:100px;
+    }
+    50%{
+        width:100%;height: 100px;
+    }
+    100%{
+        width:100%;height: 100%;
+    }
+}
+.show2{
+    position: absolute;top:100px;left:0;
+}
+.show2:hover{
+    animation-name:show2;
+    animation-duration: 2s;
+    animation-fill-mode: forwards;
+}
+@keyframes show2{
+    0%{ 
+        top:100px;
+        width:100px;height:100px;
+    }
+    50%{
+        top:100px;
+        width:100%;height: 100px;
+    }
+    100%{
+        top:0;
+        width:100%;height: 100%;
+    }
+}
+.show3{
+    position: absolute;top:200px;left:0;
+}
+.show3:hover{
+    animation-name:show3;
+    animation-duration: 2s;
+    animation-fill-mode: forwards;
+}
+@keyframes show3{
+    0%{ 
+        top:200px;
+        width:100px;height:100px;
+    }
+    50%{
+        top:200px;
+        width:100%;height: 100px;
+    }
+    100%{
+        top:0;
+        width:100%;height: 100%;
+    }
+}
+.show4{
+    position: absolute;bottom:-1px;left:0;
+}
+.show4:hover{
+    animation-name:show4;
+    animation-duration: 2s;
+    animation-fill-mode: forwards;
+}
+@keyframes show4{
+    0%{ 
+        bottom:0;
+        width:100px;height:100px;
+    }
+    50%{
+        bottom:0;
+        width:100%;height: 100px;
+    }
+    100%{
+        bottom:0;
+        width:100%;height: 100%;
+    }
+}
+
+                                
+
+.right2{                       /*爱好标题*/
+    background-color: lightslategrey;
+    border:none;
+    border-radius: 16px;
+    width:50px;height:100px;
+    transform: skewX(30deg);
+    position: absolute;
+    top:760px;right:13%;
+    line-height: 50px;
+}
+.right2  li{list-style: none;}
+
+.hobby{                       /*爱好*/
+    background-color:lightcyan;
+    width:70%;height:500px;
+    border-radius: 16px;
+    position: absolute;
+    top:560px;left:10%;
+    position: relative;
+}
+.hobby ul li{
+    float:left;
+    padding: 1em;
+    list-style: none;
+}
+.hobby img{
+    position: absolute;
+    top:50px;left:50px;
+    width:720px;height:405px;
+    /* border:none; */
+}
+.hobby p{
+    position: absolute;
+    bottom:5px;left: 50px;
+}
+
+a:link{
+    color:black;
+    text-decoration: none;
+}
+
+.foot{                          /*页脚*/
+    position: absolute;
+    bottom: -550px;left:10%;
+    width:80%;height: 200px;
+    
+}
+.foot img{
+    position: absolute;
+    bottom:25px;left:25px;
+    width:100px;height:100px;
+}
+.foot form textarea{
+    position: absolute;
+    bottom: 25px;left:150px;
+    width:400px;height:150px;
+    text-align: left;
+}

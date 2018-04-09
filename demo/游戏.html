@@ -1,0 +1,188 @@
+<html>
+<head>
+    <title>个人主页</title>
+    <meta charset="utf-8">
+    <style>
+        *{padding: 0;margin: 0;}
+        html,body{width:100%;}
+        div{
+            border: 1px solid black;
+            text-align: center;
+        }
+        a:link{
+                                    /*找个字体插件*/
+            text-decoration: none;
+            color: black;
+        }
+        a:hover{
+            color: red;
+        }
+        li{list-style: none;}
+        .top{
+            width:100%;height: 40px;
+            position: relative;
+            background:#dfdfdf;
+        }
+        .top1{
+            position: absolute;
+            left: 20%;top:50%;
+            transform:translate(0,-50%);
+            /* border: 1px solid orange; */
+            width:60%;
+        }
+        .left{
+            float:left;
+            margin-left: 10px; 
+              
+        }
+        .right{
+            float: right;
+            margin-right: 10px;
+        }
+
+        .dom{
+            width: 60%;height:400px;
+            position: absolute;
+            top:30px;left:20%;
+            position: relative;
+            border:none;
+            
+            /* background-color: lightblue; */
+            
+            
+        }   
+       .dom div{
+           display: inline-block;
+           z-index: 2;
+           border:none;
+           border-top-left-radius: 16px;
+           border-top-right-radius: 16px;
+       }
+        .box1{
+           /* z-index: 2; */
+            width:20%;height:30px;
+            background-color: greenyellow;
+            position: absolute;
+            top:0px;left:0px;
+            
+        }
+        img{
+            /* width:100%;height:100%; */
+            position:relative;
+            width:100%;height:100%;
+            opacity: 0;
+            border-top-left-radius: 16px;
+            border-top-right-radius: 16px;
+        }
+        img:hover{opacity: 1;}
+        .box1:hover{ 
+            z-index: 1;
+            animation-name: round1;
+            animation-duration:2s;
+            animation-fill-mode: forwards;
+            
+        }
+        @keyframes round1{
+            0%{width:20%;height:30px;}
+            50%{width:20%;height:400px;}
+            100%{width:100%;height:400px;}
+        }
+        .box2{
+            position: absolute;
+            top:0px;left:20%;
+            /* z-index: 2; */
+            width:20%;height: 30px;
+            background-color: blue;
+            
+            /* */
+        }
+        .box2:hover{
+            z-index: 1;
+            position:absolute;
+            animation: round2 2s ;
+            animation-fill-mode: forwards;
+        }
+        
+        
+        @keyframes round2
+        {
+            0%{width:20%;height:30px;top:0px;left:20%;}
+            50%{width:20%;height:400px;top:0px;left:20%;}
+            100%{width:100%;height:400px;top:0px;left:0px;}
+        }
+
+        .box3{
+            position: absolute;
+            top:0;left:40%;
+            /* z-index: 2; */
+            width:20%;height: 30px;
+            background-color: red;
+        }
+        .box3:hover{
+            z-index: 1;
+            /* position: absolute; */
+            animation: round3 2s ;
+            animation-fill-mode: forwards;
+        }
+        @keyframes round3
+        {
+            0%{width:20%;height:30px;top:0px;left:40%;}
+            50%{width:20%;height:400px;top:0px;left:40%;}
+            100%{width:100%;height:400px;top:0px;left:0px;}
+        }
+
+        .box4{
+            position: absolute;
+            top:0;left:60%;
+            width:20%;height:30px;
+            background-color: grey;
+        }
+        .box4:hover{
+            z-index: 1;
+            animation:round4 2s;
+            animation-fill-mode: forwards;
+        }
+        @keyframes round4
+        {
+            0%{width:20%;height:30px;top:0;left:60%;}
+            50%{width:20%;height:400px;top:0px;left:60%;}
+            100%{width:100%;height:400px;top:0;left:0;}
+        }
+        .box5{
+            position: absolute;
+            top:0;left:80%;
+            width:20%;height:30px;
+            background-color:yellow;
+        }
+        .box5:hover{
+            z-index: 1;
+            animation:round5 2s;
+            animation-fill-mode: forwards;
+        }
+        @keyframes round5
+        {
+            0%{width:20%;height:30px;top:0;left:80%;}
+            50%{width:20%;height:400px;top:0px;left:80%;}
+            100%{width:100%;height:400px;top:0;left:0;}
+        }
+    </style>
+</head>
+<body>
+    <div class="top">
+        <ul class="top1">
+            <li class="left"><a href="" title="" name="firstpage">首页</a></li>
+            <li class="left"><a href="" title="" name="firstpage">导航</a></li>
+                                                                                   <!-- 这里加入一个动画，从窗口上方滑出“欢迎光临” -->
+            <li class="right"><a href="" title="">登陆</a></li>                    <!-- 跳出登陆窗口 -->
+            <li class="right"><a href="signup.html" title="">注册</a></li>
+        </ul>
+    </div>
+    <div class="dom">
+        <div class="box1"><img src="ac/ac3.jpg"></div>
+        <div class="box2"><img src="ac/ac4.1.jpg"></div>
+        <div class="box3"><img src="ac/ac5.8.jpg"></div>
+        <div class="box4"><img src="ac/ac6.jpg"></div>
+        <div class="box5"><img src="ac/ac7.2.jpg" alt=""></div>
+    </div>
+</body>
+</html>
