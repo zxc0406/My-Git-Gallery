@@ -90,30 +90,43 @@ body{
 }
 .left li{list-style: none;}
 
+.leftword{
+    width:60px;height:400px;
+    line-height: 110px;
+    position: absolute;
+    top:120px;left:35%;
+}
+.leftword li{
+    list-style-type: disc;
+    text-decoration:none;
+}
 .friends{                      /*票圈*/
     background-color:lightcyan;
     border:none;
     border-radius: 16px;
-    width:60%;height:400px;
+    width:50%;height:400px;
     position: absolute;
     top:140px;right: 10%;
 }
 .friends div{
+    opacity: 0;
     width:100px;height:100px;
     border: none;
     border-radius: 16px;
     line-height: 100px;
-    text-align: center;
+    
     
 }
 .friends div img{
     width:100%;height: 100%;
     border-radius: 16px;
+    min-width: 300px;
 }
 .show1{
     position: absolute;top:0px;left:0px;
 }
 .show1:hover{
+    opacity: 1;
     animation-name:show;
     animation-duration: 2s;
     animation-fill-mode: forwards;
@@ -133,6 +146,7 @@ body{
     position: absolute;top:100px;left:0;
 }
 .show2:hover{
+    opacity: 1;
     animation-name:show2;
     animation-duration: 2s;
     animation-fill-mode: forwards;
@@ -155,6 +169,7 @@ body{
     position: absolute;top:200px;left:0;
 }
 .show3:hover{
+    opacity: 1;
     animation-name:show3;
     animation-duration: 2s;
     animation-fill-mode: forwards;
@@ -177,6 +192,7 @@ body{
     position: absolute;bottom:-1px;left:0;
 }
 .show4:hover{
+    opacity: 1;
     animation-name:show4;
     animation-duration: 2s;
     animation-fill-mode: forwards;
@@ -246,13 +262,29 @@ a:link{
     
 }
 .foot img{
-    position: absolute;
-    bottom:25px;left:25px;
+    display: inline-block;
+    float: left;
+    margin-left: 20px;
+    margin-top:50px;
     width:100px;height:100px;
 }
 .foot form textarea{
-    position: absolute;
-    bottom: 25px;left:150px;
+    display: inline-block;
+    float: left;
+    margin-left: 20px;
     width:400px;height:150px;
     text-align: left;
+}
+.foot ul{
+    display: inline;
+    margin-left: 20px;
+    float: left;
+    margin-left: 20px;
+    margin-top:150px;
+    transform: translate(0,-16px);
+}
+.foot ul li{
+    float: left;
+    list-style: none;
+    font-weight: bold;
 }
