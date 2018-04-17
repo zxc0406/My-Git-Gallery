@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>LoadPage2.0</title>
+    <style>
+        body{
+            background-color: grey;
+        }
+        .loading{
+            background-color:lightblue;
+            border:1px solid black;
+            width:98px;height:98px;
+            position: relative;;
+            margin-top:301px;
+            left:-50px;
+            margin-left:50%;
+            animation:load 10s forwards linear;
+            border-radius:50%;
+            
+            
+        }
+        @keyframes load{
+            from{
+                background-color:rgba(238, 238, 234, 0.938);
+                transform: rotateY(0deg);
+            }
+            to{
+                background-color: rgb(238, 252, 45);
+                transform: rotateY(1800deg);
+            }
+        }
+        .loadtext{
+            position: absolute;
+            width:100%;height:100%;
+            text-align: center;
+            line-height: 100px;
+        }
+        .loadcover{
+            position: absolute;
+            width:100%;height:100%;
+            text-align: center;
+            line-height: 100px;
+            background-color: white;
+            z-index: 100;
+            display: none;
+            border-radius: 50%;
+            box-shadow:4px 4px 100px white;
+        }
+    </style>
+</head>
+<body>
+    <div class="loading">
+        <div class="load1"></div>
+        <div class="loadtext">0%</div>
+        <div class="loadcover">加载完毕</div> 
+    </div>
+    <script>
+        var i=0;
+        function load(){
+            i++;
+            document.getElementsByClassName("loadtext")[0].innerText = i + "%";
+            if(i<100) setTimeout("load()",100);
+        }
+        setTimeout("load()",100);
+        var e=document.getElementsByClassName("loading")[0];
+        e.addEventListener("animationend",function(){
+            document.getElementsByClassName("load1")[0].style.display="none";
+            document.getElementsByClassName("loadcover")[0].style.display="inline-block";
+        });
+    </script>
+</body>
+</html>

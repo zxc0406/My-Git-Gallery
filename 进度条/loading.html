@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>LoadPage1.0</title>
+    <link rel="stylesheet" type="text/css" href="load.css">
+</head>
+<body>
+    <div class="loading">
+        <div class="loading1"></div>
+        <div class="loadingtext">0%</div>
+        <div class="loadcover">加载完毕</div>
+    </div>
+    <script>
+       //进度条和计时器
+var i=0;
+function test(){
+	i++;
+	document.getElementsByClassName("loadingtext")[0].innerText = i + "%";
+	if(i<100) setTimeout("test()",100);
+}
+setTimeout("test()",100);
+
+//进度条判断动画是否停止并将覆盖层跳出
+var e = document.getElementsByClassName("loading1")[0];
+	e.addEventListener("animationend", function(){
+        document.getElementsByClassName("loading1")[0].style.display="none";
+		document.getElementsByClassName("loadcover")[0].style.display = "inline-block";
+	});
+
+</script>
+
+</body>
+</html>
