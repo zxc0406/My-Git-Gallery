@@ -1,0 +1,13 @@
+body{
+    background-color:grey;
+}
+.contain{
+    background-color: white;
+    color:black;
+    border-color:black;
+}
+.contain div{
+    background-color: aqua;
+    color:black;
+    border-color:black;
+}
