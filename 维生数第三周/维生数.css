@@ -1,0 +1,241 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+.top{
+    width:80%;height:40px;
+    min-width: 800px;
+    position: relative;
+    top:0px;left:0px;
+    padding:0 10%;
+    background-color:rgba(223, 223, 223, 0.788);
+    line-height:40px;
+}
+.topRight{
+    float:right;
+    line-height:40px;
+    /* margin-right:20%; */
+}
+.top li{
+    float: left;
+    list-style: none;
+    margin-left: 20px;
+}
+a:link{
+    text-decoration: none;
+    color:black;
+}
+a:hover{
+    text-shadow: 1px 1px 10px white;
+}
+a:active{
+    color:black;
+}
+a:visited{
+    color:black;
+}
+/*弹出样式*/
+.loginBox{
+    display:none;
+    position: absolute;
+    top:200px;left:50%;
+    transform: translate(-50%,0);
+    z-index: 2;
+    /* width:360px;height:202px;
+    top:200px;left:50%; */
+    /* margin-left: -180px; */
+    border: 1px solid rgb(13, 176, 95);
+    border-radius: 5px;
+    background-color: rgb(20, 36, 52);
+}
+.loginBox .item{
+    width:320px;height: 48px;
+    line-height:48px;
+    margin:0 auto;
+    padding: 0 20px;
+    border:1px solid transparent;
+}
+/*登陆第一行*/
+.loginBox .firstLine{
+    background-color: rgb(244, 152, 0);
+    color: rgb(255, 255, 255);
+    font-size: 18px;
+    font-weight: bold;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    cursor: move;
+    text-align: center;
+}
+.loginBox .firstLine .loginClose{
+    display: inline-block;
+    float: right;
+    margin-right: 5px;
+    cursor: pointer;
+}
+
+.loginBox .item input{
+    display: inline-block;
+    width:80%;height: 60%;
+    margin: 0 10% 0;
+}
+.loginBox .item a.btnLogin{
+    display: block;
+    margin: 10px 35% 0;
+    height:30px;
+    line-height: 30px;
+    width:30%;background-color: rgb(244, 152, 0);;
+    color: rgb(0, 0, 0);
+    font-size: 16px;
+    font-weight: bold;
+    text-align: center;
+    border-radius: 5px;
+
+}
+.loginCover{
+    display: none;
+    width:100%;
+    height:100%;
+    position: absolute;
+    top:0;left:0;
+    z-index: 1;
+    background-color: rgb(0, 0, 0);
+    opacity: 0.3;
+}
+.header{
+    position: relative;
+    top:0px;left:0;
+    width:80%;height:120px;
+    min-width: 800px;
+    margin:0 10%;
+    vertical-align: middle;
+    /* background-color: grey; */
+}
+.headerLeft{
+    float: left;
+    height:60px;
+}
+.logo1{
+    position: absolute;
+    width:60px;height: 60px;
+    top:25%;left:0;
+}
+.content1{
+    position: absolute;
+    top:25%;left:0;bottom:25%;
+    margin-left: 62px;
+    text-align: center;
+}
+.content2{
+    position: absolute;
+    top:25%;
+    margin-left: 200px;
+    text-align: left;
+    line-height: 32px;
+}
+.headerRight{
+    position: absolute;
+    top:25%;right:0;
+    float: right;
+    
+}
+.phone{
+    vertical-align: middle;  
+}
+.content3{
+    display: inline-block;
+    vertical-align: middle;
+}
+/*导航栏*/
+.nav{
+    position: relative;
+    top:0px;
+    width:100%;height:50px;
+    min-width: 800px;
+    background-color: rgb(244,152,0);
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+}
+.navContain{
+    position: absolute;
+    top:0;left:15%;
+    width:70%;height:100%;
+    min-width: 800px;
+}
+.navContain li{
+    float: left;
+    width:14.2%;
+    background-color: transparent;
+    list-style: none;
+    /* border:1px solid black; */
+    text-align: center;
+    line-height:50px;
+}
+.navContain li:hover{
+    background-color: rgb(13, 176, 96);
+}
+
+.photolistContain{
+    position: relative;
+    width:1519.2px;height: 400px;
+    background-color: tomato;
+    overflow:hidden;
+}
+.photolist{
+    position: absolute;
+    z-index: 1;
+    width:10634.4px;height: 400px;
+}
+.photolist img{
+    float: left;
+    width:1519.2px;height: 400px;
+}
+.photolistBtn{
+    position: absolute;
+    left: 50%;
+    bottom: 20px;
+    z-index: 2;
+    height:10px;
+    width:100px;
+    transform: translate(-50%,0);
+}
+.photolistBtn span{
+    float: left;
+    margin-right: 5px;
+    width: 10px;height: 10px;
+    border: 1px solid rgb(255, 255, 255);
+    border-radius: 50%;
+    background-color: rgb(0, 0, 0);
+    cursor: pointer;
+}
+.photolistBtn .on{
+    background-color: rgb(223, 223, 223);
+}
+.arrow{
+    position: absolute;
+    top:50%;
+    transform: translate(0,-50px);
+    z-index: 2;
+    display: none;
+    width: 100px;height: 100px;
+    font-size: 100px;
+    font-weight: bold;
+    line-height: 80px;
+    text-align: center;
+    color: rgb(255, 255, 255);
+    background-color: rgba(0, 0, 0, .3);
+    cursor: pointer;
+}
+.arrow:hover{
+    background-color: rgba(0, 0, 0, .7);
+}
+.photolistContain:hover .arrow{
+    display: block;
+}
+#prev{
+    left: 20px;
+}
+#next{
+    right: 20px;
+}
+
