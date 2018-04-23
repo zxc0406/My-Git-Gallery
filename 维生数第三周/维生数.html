@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>维生数首页</title>
+    <link rel="stylesheet" type="text/css" href="维生数.css">
+    <link rel="stylesheet" type="text/css" href="font.css">
+</head>
+<body>
+    <!-- 头部 -->
+    <div class="top">
+        <span class="topRight"><a href="javascript:void(0)" class="showLogin">登陆</a></span>
+        <ul>
+            <li><a href="" name="pageHead">回到首页</a></li>
+            <li><a href="">关注微信</a></li>
+        </ul> 
+    </div>
+    <!-- 登陆框，默认隐藏 -->
+    <div class="loginBox">
+        <form action="" method="POST">
+            <div class="firstLine">
+                <span class="loginTitle">Hello!&nbsp;&nbsp;欢迎光临</span>
+                <span class="loginClose">X</span>
+            </div>
+            <div class="item">
+                <input type="text" value="用户名">
+            </div>
+            <div class="item">
+                <input type="text" value="密码">
+            </div>
+            <div class="item">
+                <a href="" class="btnLogin" onclick="">登陆</a>
+            </div>
+        </form>
+    </div>
+    <div class="loginCover"></div>
+    <div class="header">
+            <div class="headerLeft">
+                <img src="photo/logo1.png" alt="logo" class="logo1">
+                <div class="content1">
+                    <div class="largerFont">维生数</div>
+                    <hr style="width:122px;">
+                    <div style="font-size:0.5em;line-height:16px;font-weight:bold;">COMPUTE-STUDIO-VTMER</div>
+                </div>               
+                <div class="content2">
+                    <hr style="width:0.5px;height:60px;float:left;margin-left:2px;">
+                    <span style="float:left;margin-left:5px;">
+                        广工知名工作室品牌<br>
+                        广工计算机行业最具影响力的工作室之一
+                    </span>                 
+                </div>
+            </div>
+            <div class="headerRight">
+                <img src="photo/phonelogo.png" alt="phone" class="phone">
+                <div class="content3">400-0399-386</div>
+            </div>
+        </div>
+    <!-- 导航栏 -->
+    <div class="nav">
+        <!-- flex布局 -->
+        <ul class="navContain"> 
+            <li><a href="">首页</a></li>
+            <li><a href="">服务套餐</a></li>
+            <li><a href="">行业方案</a></li>
+            <li><a href="">培训中心</a></li>
+            <li><a href="">团队风采</a></li>
+            <li><a href="">关于我们</a></li>
+            <li><a href="">会员中心</a></li>
+        </ul>
+    </div>
+    <!-- 图片轮播 -->
+    <div class="photolistContain">
+        <div class="photolist" style="left: -1519.2px">
+            <img src="photo/ac7.1.jpg" alt="1">
+            <img src="photo/大背景.jpg" alt="1">
+            <img src="photo/ac1-4.jpg" alt="2">
+            <img src="photo/ac2-4.jpg" alt="3">
+            <img src="photo/ac4.jpg" alt="4">
+            <img src="photo/ac7.1.jpg" alt="5">
+            <img src="photo/大背景.jpg" alt="5">
+        </div>
+        <div class="photolistBtn">
+            <span index="1" class="on"></span>
+            <span index="2" ></span>
+            <span index="3" ></span>
+            <span index="4" ></span>
+            <span index="5" ></span>
+        </div>
+        <a href="javascript:;" id="prev" class="arrow">&lt;</a>
+        <a href="javascript:;" id="next" class="arrow">&gt;</a>
+    </div>
+    
+    <script src="addLoadEvent.js"></script>
+    <script src="LoginBox.js"></script>
+    <script src="photoRoation.js"></script>
+</body>
+</html>
