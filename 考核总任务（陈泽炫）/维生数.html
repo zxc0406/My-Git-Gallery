@@ -1,0 +1,751 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>维生数首页</title>
+    <link rel="stylesheet" type="text/css" href="维生数.css">
+    <link rel="stylesheet" type="text/css" href="font.css">
+</head>
+<body>
+    <!-- 头部 -->
+    <div class="top">
+        <span class="topRight"><a href="javascript:void(0)" class="showLogin">登陆</a></span>
+        <ul>
+            <li><a href="" name="pageHead">回到首页</a></li>
+            <li><a href="">关注微信</a></li>
+        </ul> 
+    </div>
+    <!-- 侧边栏 -->
+    <div class="sidebar">
+        <ul class="sidebarList">
+            <li><img src="photo/logo1.png" alt=""></li>
+            <li><a href="#logo">Home</a></li>
+            <li><a href="#item">Item</a></li>
+            <li><a href="#build">Build</a></li>
+            <li><a href="#market">Market</a></li>
+            <li><a href="#feature">Feature</a></li>
+            <li><a href="#merit">Merit</a></li>
+            <li><a href="#case">Case</a></li>
+            <li><a href="#menu">Menu</a></li>
+            <li><a href="#footer">Footer</a></li>
+        </ul>
+    </div>
+    <!-- 登陆框，默认隐藏 -->
+    <div class="loginBox">
+        <form action="#" id="loginForm">
+            <div class="firstLine">
+                <span class="loginTitle">Hello!&nbsp;&nbsp;欢迎光临</span>
+                <span class="loginClose">X</span>
+            </div>
+            <div class="item">
+                <input type="text" value="用户名" class="idInput" name="name">
+            </div>
+            <div class="item">
+                <input type="text" value="密码" class="pswInput" name="psw">
+            </div>
+            <div class="item">
+                <a href="javascript:;" class="btnLogin" onclick="loginSend()">登陆</a>
+            </div>
+            <span class="errorText" style="color:white;"></span>
+            <div class="ToRegister">注册→</div>
+        </form>
+    </div>
+    <div class="registerBox">
+        <form action="#" id="registerForm">
+            <div class="firstLine2">
+                <span class="registerTitle2">Hello!&nbsp;&nbsp;欢迎光临</span>
+                <span class="registerClose">X</span>
+            </div>
+            <div class="item2">
+                    <input type="text" value="用户名" class="idRegister" name="name">
+                </div>
+                <div class="item2">
+                    <input type="text" value="密码" class="pswRegister" name="psw">
+                </div>
+                <div class="item2">
+                    <input type="text" value="确认密码" class="pswAgain" name="pswAgain">
+                </div>
+                <div class="item2">
+                    <a href="javascript:;" class="btnLogin" onclick="registerSend()">登陆</a>
+                </div>
+                <span class="errorText2" style="color:white;"></span>
+                <div class="ToLogin">←登陆</div>
+        </form>
+    </div>
+    <div class="loginCover"></div>
+    <div class="header"><a name="logo"></a>
+            <div class="headerLeft">
+                <img src="photo/logo1.png" alt="logo" class="logo1">
+                <div class="content1">
+                    <div class="largerFont">维生数</div>
+                    <hr style="width:122px;">
+                    <div style="font-size:0.5em;line-height:16px;font-weight:bold;">COMPUTE-STUDIO-VTMER</div>
+                </div>               
+                <div class="content2">
+                    <hr style="width:0.5px;height:60px;float:left;margin-left:2px;">
+                    <span style="float:left;margin-left:5px;">
+                        广工知名工作室品牌<br>
+                        广工计算机行业最具影响力的工作室之一
+                    </span>                 
+                </div>
+            </div>
+            <div class="headerRight">
+                <img src="photo/phonelogo.png" alt="phone" class="phone">
+                <div class="content3">400-0399-386</div>
+            </div>
+        </div>
+    <!-- 导航栏 -->
+    <div class="nav">
+        <!-- flex布局 -->
+        <ul class="navContain"> 
+            <li><a href="">首页</a></li>
+            <li><a href="">服务套餐</a></li>
+            <li><a href="">行业方案</a></li>
+            <li><a href="">培训中心</a></li>
+            <li><a href="">团队风采</a></li>
+            <li><a href="">关于我们</a></li>
+            <li><a href="">会员中心</a></li>
+        </ul>
+    </div>
+    <!-- 图片轮播 -->
+    <div class="photolistContain">
+        <div class="photolist">
+            <img src="photo/banner1.png" alt="1" class="pic">
+            <img src="photo/banner2.jpg" alt="2" class="pic">
+            <img src="photo/banner3.jpg" alt="3" class="pic">
+            <img src="photo/banner4.jpg" alt="4" class="pic">
+            <img src="photo/banner5.jpg" alt="5" class="pic">
+        </div>
+        <div class="photolistBtn">
+            <span index="1" class="on"></span>
+            <span index="2"></span>
+            <span index="3"></span>
+            <span index="4"></span>
+            <span index="5"></span>
+        </div>
+        <a href="javascript:;" id="prev" class="arrow">&lt;</a>
+        <a href="javascript:;" id="next" class="arrow">&gt;</a>
+    </div>
+    <!-- 服务项目 -->
+    <div class="serviceItems"><a name="item"></a>
+        <div class="aroundWords"></div>
+        <div class="SItitle">
+            <span class="ITEM" style="">ITEM</span>
+            <div class="ITEMRight">
+                <div></div>
+                <span style="font-size:25px;line-height:25px;color:rgb(255, 255, 255)">服务项目<br>
+                    <span style="font-size:18px;margin-top:2px;color:rgb(210, 210, 210)">微信 微商城 自媒体 品牌推广有门道！</span></span>
+                
+            </div>
+        </div>
+        <div class="bulb2">
+            <div class="square">
+                <div ></div>
+                <div class="topBox"></div>
+                <div class="topRightBox"></div>
+                <div class="lefMiddleBox"></div>
+                <div class="centerMiddle"></div>
+                <div class="rightBox"></div> 
+                <div></div>
+                <div class="centerBottomBox"></div>
+                <div class="rightBottomBox"></div>
+            </div>
+            <span>服务项目</span>
+            <div class="bulb3"></div>
+            <div class="bulb4"></div>
+            <canvas class="bulb5"></canvas>
+        </div>
+        <canvas class="bulb1"></canvas>
+        <!-- 选项栏 -->
+        <ul class="optionList">
+            <li>
+                <input type="checkbox" class="myCheck" id="item1">
+                <label for="item1"><img src="photo/勾选.png" alt=""></label>
+                微营销培训
+            </li>
+            <li>
+                <input type="checkbox" class="myCheck" id="item2">
+                <label for="item2"><img src="photo/勾选.png" alt=""></label>
+                公众号搭建
+            </li>
+            <li>
+                <input type="checkbox" class="myCheck" id="item3">
+                <label for="item3"><img src="photo/勾选.png" alt=""></label>
+                文案策划
+            </li>
+            <li>
+                <input type="checkbox" class="myCheck" id="item4">
+                <label for="item4"><img src="photo/勾选.png" alt=""></label>
+                微商城装修
+            </li>
+            <li>
+                <input type="checkbox" class="myCheck" id="item5">
+                <label for="item5"><img src="photo/勾选.png" alt=""></label>
+                品牌推广
+            </li>
+            <li>
+                <input type="checkbox" class="myCheck" id="item6">
+                <label for="item6"><img src="photo/勾选.png" alt=""></label>
+                自媒体推广
+            </li>
+            <li>
+                <input type="checkbox" class="myCheck" id="item7">
+                <label for="item7"><img src="photo/勾选.png" alt=""></label>
+                SEO优化
+            </li>
+            <li>
+                <input type="checkbox" class="myCheck" id="item8">
+                <label for="item8"><img src="photo/勾选.png" alt=""></label>
+                付费推广央视广告
+            </li>
+            <li>
+                <input type="checkbox" class="myCheck" id="item9">
+                <label for="item9"><img src="photo/勾选.png" alt=""></label>
+                诚信授牌
+            </li>
+            <li>
+                <input type="checkbox" class="myCheck" id="item10">
+                <label for="item10"><img src="photo/勾选.png" alt=""></label>
+                舆情检测
+            </li>
+            <li class="clickBtn">了解详情</li>
+        </ul>
+    </div>
+    <!-- 平台搭建 -->
+    <div class="platformBuilding"><a name="build"></a>
+        <div class="PBTitle">
+            <span class="BUILD">BUILD</span>
+            <div class="BUILDRight">
+                <div class="BUILDLight"></div>
+                <span style="font-size:25px;line-height:25px;color:rgb(20,36,52)">
+                    平台搭建<br>
+                    <span style="font-size:18px;margin-top:2px;color:rgb(20,36,52)">
+                        借助多平台曝光品牌，获取更多的粉丝!                         
+                    </span>
+                </span>
+            </div>
+        </div>
+        <div class="PBArticle1">微信公众号搭建 庞大功能体系提升用户体验</div>
+        <div class="PBBox1">
+            <div class="PB1"><img src="photo/平台搭建1.png" alt=""><span>微信认证</span></div>
+            <div class="PB2"><img src="photo/平台搭建2.png" alt=""><span>功能配置</span></div>
+            <div class="PB3"><img src="photo/平台搭建3.png" alt=""><span>自定义菜单</span></div>
+            <div class="PB4"><img src="photo/平台搭建4.png" alt=""><span>关键词回复</span></div>
+        </div>
+        <div class="PBArticle2">微商城搭建与装修 高大上页面圈住精准粉丝</div>
+        <div class="PBBox2">
+            <div class="PB5"><img src="photo/平台搭建5.png" alt=""><span>专题页面设计</span></div>
+            <div class="PB6"><img src="photo/平台搭建6.png" alt=""><span>店铺装修</span></div>
+            <div class="PB7"><img src="photo/平台搭建7.png" alt=""><span>详情页制作</span></div>
+            <div class="PB8"><img src="photo/平台搭建8.png" alt=""><span>页面整改</span></div>
+        </div>
+    </div>
+    <!-- 全网营销 -->
+    <div class="marking">
+        <div class="markingTitle"><a name="market"></a>
+            <span class="MARKET">MARKET</span>
+            <div class="MARKETRight">
+                <div></div>
+                <span style="font-size:25px;line-height:25px;color:rgb(255, 255, 255)">
+                    全网营销<br>
+                    <span style="font-size:18px;margin-top:2px;color:rgb(210,210,210)">
+                        多渠道推广、精准投放，一网打尽！
+                    </span>
+                </span>     
+            </div>
+        </div>
+        <div class="plan">
+            <div class="planTitle">文案策划</div>
+
+            <div class="planBox">
+                <div><img src="photo/文案策划.png" alt=""></div>
+                <span planLine></span>
+                <div><img src="photo/文案策划2.png" alt=""></div>
+                <span planLIine></span>
+                <div><img src="photo/文案策划3.png" alt=""></div>
+            </div>
+            <div class="planBoxWord">
+                <span>文案撰写</span>
+                <span></span>
+                <span>图文设计</span>
+                <span></span>
+                <span>活动策划</span>
+            </div>    
+        </div>
+    </div>
+    <!-- 网站优化 -->
+    <div class="webOptimize">
+        <div class="optimize">
+            <div class="WOBox">
+                <span class="WOTitle">网站优化</span>
+                <div class="WOFlex">
+                    <div class="WO1">
+                        <p class="WOdown"><span style="font-size:23px;">SEO</span>——品牌词优化，让网站排名更靠前</p>
+                    </div>
+
+                    <div class="WO2">
+                        <p class="WOdown"><span style="font-size:23px;">SEM</span>——精准投放广告，获取精准目标用户</p>
+                    </div>
+                </div>    
+            </div>
+        </div>
+    </div>
+    <!-- 品牌推广 -->
+    <div class="BrandPromotion">
+        <div class="BPBackground"></div>
+        <div class="brand">
+            <div class="BPBox">
+                <span class="BPTitle">品牌推广</span>
+                <div class="BPFlex">
+                    <div>
+                        <img src="photo/CCTV.png" alt="">
+                        <span class="BPBigletter">央视广告</span>
+                        <hr>
+                        <span class="BPAtitcle">在央视播放广告，借助央视的宣传品牌，增加品牌的公信力</span>
+                    </div>
+                    <div class="BPFlex2">
+                        <img src="photo/CCTV2.png" alt="">
+                        <span class="BPBigletter">腾讯社交广告</span>
+                        <hr>
+                        <span class="BPAtitcle">QQ音乐、空间、对话框等腾讯平台的图文广告，覆盖面广</span>
+                    </div>
+                    <div>
+                        <img src="photo/CCTV3.png" alt="">
+                        <span class="BPBigletter">朋友圈定投</span>
+                        <hr>
+                        <span class="BPAtitcle">精准投放，覆盖面广，朋友圈活跃度高</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- 特色服务 -->
+    <div class="featureService"><a name="feature"></a>
+        <div class="FSTitle">
+            <span class="FEATURE">FEATURE</span>
+            <div class="FEATURERight">
+                <div></div>
+                <span style="font-size:25px;line-height:25px;color:rgb(20,36,52);">
+                    特色服务<br>                    
+                    <span style="font-size:18px;margin-top:2px;color: rgb(20,36,52);">
+                        树立企业正面形象，边学习边实战！
+                    </span>
+                </span>
+            </div>
+        </div>
+        <div class="feature">
+            <div class="FSFlex">
+                <div>
+                    <img src="photo/特色服务1.png" alt="">
+                    <span class="FSArticle" style="font-size:14px;font-weight:bold;">品牌维护
+                        <br><span style="font-size:11px;font-weight:normal;">树立企业正面形象</span></span>
+                </div>    
+                <div>
+                    <img src="photo/特色服务2.png" alt="">
+                    <span class="FSArticle" style="font-size:14px;font-weight:bold;">诚信授牌
+                        <br><span style="font-size:11px;font-weight:normal;">授企业诚信牌，提高品牌<br>诚信度和美誉度</span></span>
+                </div>    
+                <div>
+                    <img src="photo/特色服务3.png" alt="">
+                    <span class="FSArticle" style="font-size:14px;font-weight:bold;">舆情检测
+                        <br><span style="font-size:11px;font-weight:normal;">1.协助企业投放新闻
+                            <br>制定压制负面方案</span></span>
+                </div>
+                <div class="FSTrain">
+                    <span class="FSTrainTitle" style="font-size:14px;">微营销王牌课程培训</span>
+                    <ol>
+                        <li>1.学习最实战的企业微营销课程，提高业绩。</li>
+                        <li>2.线上线下同步培训，全年跟进辅导。</li>
+                        <li>3.循环式滚动开课，一年内免费复训。</li>
+                        <li>4.行业资深讲师“3+7”授课法，学习更高效。</li>
+                    </ol>
+                    <span class="FSTrainBtn" style="font-size:14px;">立即报名</span>
+                </div>    
+            </div>
+        </div>
+
+    </div>
+    <!-- 服务优势 -->
+    <div class="serviceMerit"><a name="merit"></a>
+        <div class="SMTitle">
+            <span class="MERIT">MERIT</span>
+            <div class="MERITRight">
+                <div></div>
+                <span style="font-size:25px;line-height:25px;color:rgb(255, 255, 255)">
+                    服务优势<br>
+                    <span style="font-size:18px;margin-top:2px;color:rgb(210, 210, 210)">
+                        用最小的成本，为客户创造最大价值！
+                    </span>
+                </span>
+            </div>
+        </div>
+    </div>
+    <!-- 优势1 -->
+    <div class="Merit1">
+        <div class="merit1">
+            <div class="meritBox1">
+                <p>服务内容丰富<br><br>
+                    <span>
+                        元典服务内容丰富，包含公众号搭建、微商城装修、文案策划、品牌推广、seo优化、企业王牌课程培训等，全方位、高价值，让企业如虎添
+                    </span>
+                </p>
+                <img src="photo/优势1.png" alt="">
+            </div>
+        </div>
+    </div>
+    <!-- 优势2 -->
+    <div class="Merit2">
+        <div class="merit2">
+            <div class="meritBox2">
+                <p>定制四大套餐<br><br>
+                    <span>
+                        元典根据企业产品的特征，行业的属性特别定制四大微营销服务套餐，总有一款属于你。
+                    </span>
+                </p>
+                <img src="photo/优势2.png" alt="">
+            </div>
+        </div>
+    </div>
+    <!-- 优势3 -->
+    <div class="Merit3">
+        <div class="merit3">
+            <div class="meritBox3">
+                <p>汇集微营销精英团队<br><br>
+                    <span>
+                            元典公司有近300人培训服务团队，岗位包含文案策划、推广专员、美工设计、技术开发、粉丝维护等，采用多对一服务模式，更高效的服务
+                    </span>
+                </p>
+                <img src="photo/优势3.png" alt="">
+            </div>
+        </div>
+    </div>
+    <!-- 优势4 -->
+    <div class="Merit4">
+        <div class="merit4">
+            <div class="meritBox4">
+                <p>量身定制运营方案<br><br>
+                    <span>
+                        每一个企业的规模和发展都不相同，元典公司从企业所属行业、产品出发，为每一个企业量身定制营销、运营、推广、策划方案。
+                    </span>
+                </p>
+                <img src="photo/优势4.png" alt="">
+            </div>
+        </div>
+    </div>
+    <!-- 优势5 -->
+    <div class="Merit5">
+        <div class="merit5">
+            <div class="meritBox5">
+                <p>丰富的渠道资源<br><br>
+                    <span>
+                        元典推广渠道资源丰富，包含百度、新浪、腾讯、搜狐等高端媒介平台，还有微博、博客、知道、贴吧、天涯、西祠、 58、百姓、列表、钱
+                    </span>
+                </p>
+                <img src="photo/优势5.png" alt="">
+            </div>
+        </div>
+    </div>
+    <!-- 企业案例弹框 -->
+    <div class="caseFrameShadow"></div>
+    <div class="caseFrame">
+            <div class="CFTitle">
+                <img src="photo/企业案例标题.png" alt="">
+                <p class="CFTitle1">企业案例标题</p>
+            </div>
+            <span class="closeCase">x</span>
+            <div class="CFContain">
+                <div class="CFPhoto">
+                    <img src="photo/企业案例logo.png" alt="" class="casePhoto">
+                </div>
+                <div class="CFArticle">
+                    <p>企业案例介绍：</p>
+                    <p> 我也不知道要说什么，但大概这是一个介绍，文本不能溢出屏幕，比例大概就是这个，
+                        行距要注意好，首行要缩进两个字符喔！巴拉巴拉巴拉巴拉巴拉巴拉巴拉巴拉巴拉巴拉巴拉巴拉
+                        巴拉巴拉巴拉巴拉巴拉巴拉巴拉巴拉巴拉巴拉巴拉巴拉巴拉巴拉巴拉巴拉巴拉巴拉巴拉巴拉巴拉
+                        巴拉巴拉巴拉巴拉巴拉巴拉巴拉巴拉巴拉巴拉巴拉巴拉巴拉巴拉巴拉巴拉巴拉巴拉巴拉巴拉巴拉
+                        巴拉巴拉巴拉巴拉巴拉巴拉巴拉巴拉巴拉巴拉巴拉巴拉巴拉巴拉巴拉巴拉巴拉巴拉巴拉巴拉巴拉
+                        巴拉巴拉巴拉巴拉巴拉巴拉巴拉巴拉巴拉巴拉巴拉巴拉巴拉巴拉巴拉巴拉巴拉巴拉巴拉巴拉巴拉
+                        巴拉巴拉巴拉巴拉巴拉巴拉巴拉巴拉巴拉巴拉巴拉巴拉巴拉巴拉巴拉巴拉巴拉巴拉巴拉巴拉巴拉。    
+                    </p>
+                </div>
+            </div>
+            <p class="more"><a href="#here" neme="here">获取更多→</a><br>(企业链接)</p>
+        </div>
+    <!-- 企业案例 -->
+    <div class="enterpriseCase"><a name="case"></a>
+        <div class="ECTitle">
+            <span class="CASE">CASE</span>
+            <div class="CASERight">
+                <div></div>
+                <span style="font-size:25px;line-height:25px;color:rgb(255, 255, 255)">
+                        企业案例<br>
+                        <span style="font-size:18px;margin-top:2px;color:rgb(210,210,210)">
+                            他们的选择证明了我们的态度和能力
+                        </span>
+                </span>
+            </div>
+        </div>
+        <div class="case">
+            <div class="ECFlex">
+                <div>
+                    <img src="photo/企业案例logo1.png" alt="" class="caseLogo1">
+                </div>
+                <div>
+                    <img src="photo/企业案例logo2.png" alt="" class="caseLogo2">
+                </div>
+                <div>
+                    <img src="photo/企业案例logo1.png" alt="">
+                </div>
+                <div>
+                    <img src="photo/企业案例logo2.png" alt="">
+                </div>
+                <div>
+                    <img src="photo/企业案例logo1.png" alt="">
+                </div>
+                <div>
+                    <img src="photo/企业案例logo2.png" alt="">
+                </div>
+                <div>
+                    <img src="photo/企业案例logo1.png" alt="">
+                </div>
+                <div>
+                    <img src="photo/企业案例logo2.png" alt="">
+                </div>
+                <div>
+                    <img src="photo/企业案例logo1.png" alt="">
+                </div>
+                <div>
+                    <img src="photo/企业案例logo2.png" alt="">
+                </div>
+                <div>
+                    <img src="photo/企业案例logo1.png" alt="">
+                </div>
+                <div>
+                    <img src="photo/企业案例logo2.png" alt="">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 服务套餐 -->
+    <div class="serviceMenu"><a name="menu"></a>
+        <div class="menu">
+            <div class="SUTitle">
+                <span class="MENU">MENU</span>
+                <div class="MENURight">
+                    <div></div>
+                    <span style="font-size:25px;line-height:25px;color:rgb(20,36,52);">
+                        服务套餐<br>                    
+                        <span style="font-size:18px;margin-top:2px;color: rgb(20,36,52);">
+                            四大套餐，总有一款适合你
+                        </span>
+                    </span>
+                </div>
+            </div>
+            
+                <div class="SUFormBox">
+                    <div class="SUFormTitle">微营销创业套餐</div>
+                    <table class="SUForm">
+                        <tr>
+                            <td class="SUtopleft">项目</td>
+                            <td>内容详情</td>
+                            <td class="SUtopright">预期效果</td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <input type="checkbox" id="option1">
+                                <label for="option1"><img src="photo/勾选.png" alt=""></label>
+                                公众号搭建
+                            </td>
+                            <td>开通并搭建微信公众运营平台，免费认证</td>
+                            <td>可使用公众号进行品牌宣传和产品销售</td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <input type="checkbox" id="option2">
+                                <label for="option2"><img src="photo/勾选.png" alt=""></label>
+                                微商城装修
+                            </td>
+                            <td>使用微商城进行产品销售</td>
+                            <td>通过微商城获取客户提成销售额</td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <input type="checkbox" id="option3">
+                                <label for="option3"><img src="photo/勾选.png" alt=""></label>
+                                文案策划
+                            </td>
+                            <td>持续对公众号进行内容营销和活动策划</td>
+                            <td>通过公众号获取粉丝用户</td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <input type="checkbox" id="option4">
+                                <label for="option4"><img src="photo/勾选.png" alt=""></label>
+                                品牌推广
+                            </td>
+                            <td>面向全网对品牌进行布局，并实施内容发布与推广</td>
+                            <td>利用在各大平台和载体的全网布局，曝光品牌吸引粉丝</td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <input type="checkbox" id="option5">
+                                <label for="option5"><img src="photo/勾选.png" alt=""></label>
+                                微营销王牌课程
+                            </td>
+                            <td>企业学习如何做好微营销</td>
+                            <td>掌握企业微营销课程并执行，提高业绩</td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <input type="checkbox" id="option6">
+                                <label for="option6"><img src="photo/勾选.png" alt=""></label>
+                                全网付费业务代办
+                            </td>
+                            <td>代办各类付费渠道的开户业务和前期账户搭建</td>
+                            <td>用专业的能力帮助企业在付费推广平台上迈出平稳第一步</td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <input type="checkbox" id="option7">
+                                <label for="option7"><img src="photo/勾选.png" alt=""></label>
+                                自媒体推广
+                            </td>
+                            <td>提高品牌曝光度与品牌美誉度，被更多用户关注</td>
+                            <td>吸引网民关注品牌，增加粉丝量和曝光</td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <input type="checkbox" id="option8">
+                                <label for="option8"><img src="photo/勾选.png" alt=""></label>
+                                诚信授牌
+                            </td>
+                            <td>授予国家部委级协会认证的诚信示范牌匾</td>
+                            <td>提高品牌诚信度和美誉度</td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <input type="checkbox" id="option9">
+                                <label for="option9"><img src="photo/勾选.png" alt=""></label>
+                                舆情监测
+                            </td>
+                            <td>时刻关注品牌舆情走向，提前把控市场方向</td>
+                            <td>做好品牌推广指引和布控，危机预警</td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <input type="checkbox" id="option10">
+                                <label for="option10"><img src="photo/勾选.png" alt=""></label>
+                                SEO优化
+                            </td>
+                            <td>让品牌和内容营销更易被搜索引擎收录并抓取</td>
+                            <td>提升搜索引擎抓取品牌几率和排名更靠前</td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <input type="checkbox" id="option11">
+                                <label for="option11"><img src="photo/勾选.png" alt=""></label>
+                                央视广告
+                            </td>
+                            <td>登录央视电视广告</td>
+                            <td>与央视品牌捆绑，增加品牌公信力</td>
+                        </tr>
+                        <tr>
+                            <td class="SUbottomleft"></td>
+                            <td></td>
+                            <td class="SUbottomright"></td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+            <span  class="sendInfo" onclick="sendTickInfo()" >了解详情</span>
+    </div>
+    <footer><a name="footer"></a>
+        <div class="foot">
+            <div class="FFlex">            
+                <div class="FPlatForm">
+                    <p class="quickSininTitle">维生数<br>专业学生技术服务平台</p>
+                    <span>快速登录</span>
+                    <form class="quickSinIn">
+                        <p>用户名<input type="text" name="ID" class="id"></p>
+                        <p>密码<input type="password"  name="psw" class="psw"></p>
+                        <input type="button" onclick="login()" class="QLoginBtn" value="登陆">
+                        <input type="button" onclick="showRegisterBox()" class="Qregister" value="注册">                        
+                    </form>
+                </div>
+                <div class="Fline"></div>
+                <div class="FMap">
+                    <p>网站地图</p>
+                    <ul>
+                        <li>首页&nbsp;Home&nbsp;&nbsp;&nbsp;&nbsp;></li>
+                        <li>服务套餐&nbsp;Service&nbsp;></li>
+                        <li>行业方案&nbsp;Cace&nbsp;&nbsp;&nbsp;> </li>
+                        <li>培训中心&nbsp;Training&nbsp;</li>
+                        <li>团队风采&nbsp;Teacher&nbsp;></li>
+                        <li>关于我们&nbsp;Menu&nbsp;&nbsp;></li>
+                        <li>会员中心&nbsp;About&nbsp;&nbsp;></li>
+                    </ul>
+                </div>
+                <div class="Fline"></div>
+                <div class="FattenUS">
+                    <p>关注我们</p>
+                    <div class="FUSContain">
+                        <img src="photo/二维码.png" alt="二维码">                        
+                        <span class="FUSArticle">
+                            <span class="FUSLine1">维生数公众号：</span><br>
+                            <span>
+                                微信号：<span class="FUSLine2">vtmers</span>
+                                    <br>微信在线服务咨询
+                                    <br>获取最新工作室信息
+                                    <br>免费资源，资料分享等等
+                            </span>
+                        </span>                       
+                    </div>
+                </div>
+                <div class="Fline"></div>
+                <div class="FcontactUS">
+                    <p>联系我们</p>
+                    <div class="FUS2Contain">
+                        <div>
+                            <img src="photo/联系我们1.png" alt="">
+                            <span style="">
+                                服务热线<br>
+                                <span style="color:rgb(209, 209, 209)">400-039-9386</span>
+                            </span>
+                        </div>
+                        <div>
+                            <img src="photo/联系我们2.png" alt="">
+                            <span style="">
+                                QQ在线咨询&nbsp;&nbsp;&nbsp;<span class="qqBtn">点击咨询</span><br>
+                                <span style="color:rgb(209, 209, 209)">2881578474</span>
+                            </span>
+                        </div>
+                        <div>
+                            <img src="photo/联系我们3.png" alt="">
+                            <span style="">
+                                点击咨询<br>
+                                <span style="color:rgb(209, 209, 209)">服务时间 周一~周六</span>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <p class="FcopyRight">
+            版权所有维生数工作室团队<br>粤ICP备00000000号-0
+        </p>
+    </footer>
+
+
+    <script src="js/addLoadEvent.js"></script>
+    <script src="js/LoginBox.js"></script>
+    <!-- <script src="js/photoRoation.js"></script> -->
+    <script src="js/photoList3.js"></script>
+    <script src="js/bulb.js"></script>
+    <script src="js/idea.js"></script>
+    <script src="js/form.js"></script>
+    <script src="js/case.js"></script>
+</body>
+</html>

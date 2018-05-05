@@ -1,0 +1,1779 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+body{
+    
+}
+/**/
+.top{
+    width:80%;height:40px;
+    min-width: 800px;
+    position: relative;
+    top:0px;left:0px;
+    padding:0 10%;
+    background-color:rgba(223, 223, 223, 0.788);
+    line-height:40px;
+}
+.topRight{
+    float:right;
+    line-height:40px;
+    /* margin-right:20%; */
+}
+.top li{
+    float: left;
+    list-style: none;
+    margin-left: 20px;
+}
+a:link{
+    text-decoration: none;
+    color:black;
+}
+a:hover{
+    text-shadow: 1px 1px 10px white;
+}
+a:active{
+    color:black;
+}
+a:visited{
+    color:black;
+}
+/*侧边栏*/
+.sidebar{
+    position: fixed;
+    top: 30%;right: 5%;
+    width: 60px;height: 60px;
+    /* border: 1px solid black; */
+    z-index: 1;
+    overflow: hidden;
+    transition: height 1s ;
+}
+.sidebarList{
+    list-style: none;
+    text-align: center;
+}
+.sidebarList li{
+    margin-bottom: 5px;
+    height: 20px;
+}
+.sidebar li:nth-child(1){
+    width: 50px;height: 60px;
+    cursor: pointer;
+}
+.sidebar li img{
+    margin-left: 5px;
+    width: 50px;height: 60px;
+    transition: all 1s linear;
+}
+/*登陆框弹出样式*/
+.loginBox{
+    display:none;
+    position: fixed;
+    top:200px;left:50%;
+    transform: translate(-50%,0);
+    z-index: 4;
+    /* width:360px;height:202px;
+    top:200px;left:50%; */
+    /* margin-left: -180px; */
+    border: 1px solid rgb(13, 176, 95);
+    border-radius: 5px;
+    background-color: rgb(20, 36, 52);
+    transition: all 1s;
+}
+.loginBox .item{
+    width:522px;height: 55px;
+    line-height:55px;
+    margin:20px auto;
+    padding: 0 50px;
+    border:1px solid transparent;
+}
+/*登陆第一行*/
+.loginBox .firstLine{
+    background-color: rgb(244, 152, 0);
+    color: rgb(255, 255, 255);
+    font-size: 18px;
+    font-weight: bold;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    cursor: move;
+    text-align: center;
+}
+.loginBox .firstLine .loginClose{
+    display: inline-block;
+    float: right;
+    margin-right: 5px;
+    cursor: pointer;
+}
+
+.loginBox .item input{
+    display: inline-block;
+    width:80%;height: 60%;
+    margin: 0 10% 0;
+    border: 1px solid transparent;
+    border-radius: 6px;
+}
+.loginBox .item a.btnLogin{
+    display: block;
+    margin: 10px 35% 0;
+    height:30px;
+    line-height: 30px;
+    width:30%;background-color: rgb(244, 152, 0);;
+    color: rgb(0, 0, 0);
+    font-size: 16px;
+    font-weight: bold;
+    text-align: center;
+    border-radius: 5px;
+    transition: background-color 900ms;
+}
+.loginBox .item a.btnLogin:hover{
+    background-color: rgb(13, 176, 96);
+}
+.ToRegister{
+    position: absolute;
+    right: 0;bottom: 0;
+    color: white;
+    cursor: pointer;
+}
+.registerBox{
+    display:none;
+    position: fixed;
+    top:200px;left:50%;
+    transform: translate(-50%,0);
+    z-index: 4;
+    border: 1px solid rgb(13, 176, 95);
+    border-radius: 5px;
+    background-color: rgb(20, 36, 52);
+    transition: all 2s;
+}
+
+.registerBox .item2{
+    width:522px;height: 55px;
+    line-height:55px;
+    margin:20px auto;
+    padding: 0 50px;
+    border:1px solid transparent;
+}
+/*注册第一行*/
+.registerBox .firstLine2{
+    background-color: rgb(244, 152, 0);
+    color: rgb(255, 255, 255);
+    font-size: 18px;
+    font-weight: bold;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    cursor: move;
+    text-align: center;
+}
+.registerBox .firstLine2 .registerClose{
+    display: inline-block;
+    float: right;
+    margin-right: 5px;
+    cursor: pointer;
+}
+.registerBox .item2 input{
+    display: inline-block;
+    width:80%;height: 60%;
+    margin: 0 10% 0;
+    border: 1px solid transparent;
+    border-radius: 6px;
+}
+.registerBox .item2 a.btnLogin{
+    display: block;
+    margin: 10px 35% 0;
+    height:30px;
+    line-height: 30px;
+    width:30%;background-color: rgb(244, 152, 0);;
+    color: rgb(0, 0, 0);
+    font-size: 16px;
+    font-weight: bold;
+    text-align: center;
+    border-radius: 5px;
+    transition: background-color 900ms;
+}
+.registerBox .item2 a.btnLogin:hover{
+    background-color: rgb(13, 176, 96);
+}
+.ToLogin{
+    color: white;
+    cursor: pointer;
+}
+
+
+
+
+
+
+
+
+.loginCover{
+    display: none;
+    width:100%;
+    height:100%;
+    position: absolute;
+    top:0;left:0;
+    z-index: 3;
+    background-color: rgb(0, 0, 0);
+    opacity: 0.3;
+}
+/*头部*/
+.header{
+    position: relative;
+    top:0px;left:0;
+    width:80%;height:120px;
+    min-width: 800px;
+    margin:0 10%;
+    vertical-align: middle;
+    /* background-color: grey; */
+}
+.headerLeft{
+    float: left;
+    height:60px;
+}
+.logo1{
+    position: absolute;
+    width:60px;height: 60px;
+    top:25%;left:0;
+}
+.content1{
+    position: absolute;
+    top:25%;left:0;bottom:25%;
+    margin-left: 62px;
+    text-align: center;
+}
+.content2{
+    position: absolute;
+    top:25%;
+    margin-left: 200px;
+    text-align: left;
+    line-height: 32px;
+}
+.headerRight{
+    position: absolute;
+    top:25%;right:0;
+    float: right;
+    
+}
+.phone{
+    vertical-align: middle;  
+}
+.content3{
+    display: inline-block;
+    vertical-align: middle;
+}
+/*导航栏*/
+.nav{
+    position: relative;
+    top:0px;
+    width:100%;height:50px;
+    min-width: 800px;
+    background-color: rgb(244,152,0);
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+}
+.navContain{
+    position: absolute;
+    top:0;left:15%;
+    width:70%;height:100%;
+    min-width: 800px;
+    border: 0px solid black;
+
+}
+.navContain li{
+    float: left;
+    width:14.2%;
+    background-color: transparent;
+    list-style: none;
+    /* border:1px solid black; */
+    text-align: center;
+    line-height:50px;
+}
+.navContain li:hover{
+    background-color: rgb(13, 176, 96);
+}
+/*轮播图*/
+.photolistContain{
+    position: relative;
+    width:100%;height: 400px;
+    /* background-color: tomato; */
+    top: 0;left: 50%;
+    transform: translate(-50%,0);
+}
+.photolist{
+    position: absolute;
+    z-index: 1;
+    width:100%;height: 400px;
+    overflow: hidden;
+}
+.photolistBtn{
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%,0);
+    bottom: 20px;
+    height:10px;
+    width:100px;
+    z-index: 2;
+}
+.photolistBtn span{
+    float: left;
+    margin-right: 5px;
+    width: 10px;height: 10px;
+    border: 1px solid rgb(255, 255, 255);
+    border-radius: 50%;
+    background-color: rgb(0, 0, 0);
+    cursor: pointer;
+}
+.photolistBtn .on{
+    background-color: rgb(223, 223, 223);
+}
+.arrow{
+    position: absolute;
+    display: none;
+    top:50%;
+    transform: translate(0,-50%);
+    width: 100px;height: 100px;
+    font-size: 100px;
+    font-weight: bolder;
+    line-height: 80px;
+    text-align: center;
+    color: rgb(255, 255, 255);
+    background-color: rgba(0, 0, 0, .3);
+    cursor: pointer;
+    z-index: 2;
+}
+.arrow:hover{
+    background-color: rgba(0, 0, 0, .7);
+}
+.photolistContain:hover .arrow{
+    display: block;
+}
+#prev{
+    left: 20px;
+}
+#next{
+    right: 20px;
+}
+.pic{
+    display: inline-block;
+    position: absolute;
+    left: 0;
+    width:100%;height: 400px;
+    font-size: 0px;
+    opacity: 0;
+    transition: all 1.5s ;
+}
+.pic:nth-child(1){
+    opacity: 1;
+} 
+/*服务项目*/
+.serviceItems{
+    position: relative;
+    width: 100%;height: 696px;
+    background-color: rgb(20, 36, 52);
+}
+.SItitle{
+    position: absolute;
+    top: 20px;left: 50%;
+    transform: translate(-50%,0);
+    height: 50px;
+    min-width: 427px;
+    /* border: 1px solid black; */
+}
+.ITEM{
+    font-size:40px;
+    line-height:50px;
+    color: rgb(244,152,0);
+    vertical-align: top;
+}
+.ITEMRight{
+    display: inline-block;
+    
+}
+.ITEMRight div{
+    display: inline-block;
+    width:5px;height:48px;
+    background-color: rgb(244,152,0);
+    margin-top: 1px;
+    float: left;
+    margin-right: 15px;
+}
+.ITEMRight span{
+    display: inline-block;
+}
+.bulb1{
+    position: absolute;
+    top: 50%;left: 50%;
+    transform: translate(-50%,-50%);
+    width: 900px;height: 450px;
+    /* border: 1px solid white; */
+    
+}
+.bulb2{
+    position: absolute;
+    top:42%;left: 50%;
+    transform: translate(-50%,0);
+    width: 130px;height:280px;
+    /* border: 1px solid black; */
+    padding: 5px;
+    color: rgb(244, 152, 0);
+    text-align: center;
+    font-size: 20px;
+    /* background-color: rgba(255, 255, 255, 0.26); */
+    overflow: visible;
+    
+}
+.square{
+    width: 100px;height: 100px;
+    margin:10px 15px;
+    /* background-color: none; */
+    overflow: visible;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+    align-items: center;
+    border: none;
+    
+}
+.square div{
+    width: 30px;height: 30px;
+    background-color: rgb(255, 255, 255);
+    border-radius: 5px;
+    box-shadow: 0px 0px 100px  white;    
+}
+
+/*盒子背景*/
+.topBox{
+    transform: rotate(-30deg)translate(5px,-5px);
+    background: url(photo/centerTop.png) no-repeat;
+    background-size: 28px 28px;
+    
+}
+.rightBox{
+    transform: rotate(50deg)translate(-2px,-10px);
+}
+.topRightBox{
+    /* position: absolute; */
+    transform: translate(10px,-15px);
+    background: url(photo/topRightBox.png) no-repeat;
+    background-size: 32px 32px;
+}
+.lefMiddleBox{
+    background: url(photo/leftMiddleBox.png) no-repeat;
+    background-size: 32px 32px;
+}
+.centerMiddle{
+    background: url(photo/centerMiddleBox.png) no-repeat;
+    background-size: 32px 32px;
+}
+.centerBottomBox{
+    background: url(photo/centerBottomBox.png) no-repeat;
+    background-size: 32px 32px;
+}
+.rightBottomBox{
+    background: url(photo/rightBottomBox.png) no-repeat;
+    background-size: 32px 32px;
+}
+
+/*文字*/
+.bulb2 span{
+    display: inline-block;
+    
+    /* border: 1px solid black; */
+    /* transform: translate(0,120px); */
+}
+.bulb3{
+    width: 100px;height: 60px;
+    background-color: rgb(244, 152, 0);
+    border-radius: 5px;
+    margin: 10px 15px;
+}
+.bulb4{
+    width: 70px;height: 20px;
+    background-color: rgb(244, 152, 0);
+    border-radius: 5px;
+    margin: 0 30px;
+}
+.bulb5{
+    
+    width: 60px;height: 30px;
+    margin: 10px 35px;
+    /* border: 1px solid red; */
+}
+.aroundWords{
+    background: url(photo/灯泡文字.png) no-repeat;
+    background-size: 450px 450px;
+    position: absolute;
+    top: 50%;left: 50%;
+    transform: translate(-50%,-50%);
+    width: 450px;height: 450px;
+}
+.optionList{
+    position: absolute;
+    left: 65%;bottom: 5%;
+    color: rgb(255, 255, 255);
+}
+.optionList li{
+    list-style: none;
+    font-size: 10px;
+}
+.optionList input[type=checkbox]{
+    display: none;
+}
+.optionList input+label{
+    background-color: gray;
+    width:10px;height: 10px;
+    display: inline-block;
+    position: relative;
+    overflow: hidden;
+}
+.optionList label img{
+    position: absolute;
+    top: -10px;left: -5px;
+    width: 20px;height: 20px;
+    display: none;
+}
+.optionList input[type=checkbox]:checked+label{
+    overflow: visible;
+}
+.optionList .clickBtn{
+    width: 130px;height: 40px;
+    margin-top: 10px;
+    border-radius: 5px;
+    font-size: 16px;
+    text-align: center;
+    line-height: 40px;
+    background-color: rgb(46,182,109);
+    transition: background-color 900ms;
+}
+.clickBtn:hover{
+    background-color: rgb(244, 152, 0);
+    cursor: pointer;
+}
+/*平台搭建*/
+.platformBuilding{
+    position: relative;
+    width: 100%;height: 690px;
+    background-color: rgb(255, 255, 255);
+}
+.PBTitle{
+    position: absolute;
+    top: 20px;left: 50%;
+    transform: translate(-50%,0);
+    height: 50px;
+    min-width: 455px;
+}
+.BUILD{
+    font-size:40px;
+    line-height:50px;
+    color: rgb(244,152,0);
+    vertical-align: top;
+}
+.BUILDRight{
+    display: inline-block;
+}
+.BUILDRight div{
+    display: inline-block;
+    width:5px;height:48px;
+    background-color: rgb(244,152,0);
+    margin-top: 1px;
+    float: left;
+    margin-right: 15px;
+}
+.BUILDRight span{
+    display: inline-block;
+}
+/*平台搭建标题*/
+.PBArticle1{
+    position: absolute;
+    top: 120px;left: 50%;
+    transform: translate(-50%,0);
+    font-size: 19px;
+    line-height: 19px;
+    min-width: 368px;
+}
+.PBBox1{
+    position: absolute;
+    top: 180px;left: 50%;
+    transform: translate(-50%,0);
+    width: 941px;
+    min-width: 800px;
+    /* border: 1px solid black; */
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-around;
+    min-width: 671px;
+}
+.PBArticle2{
+    position: absolute;
+    top: 400px;left: 50%;
+    transform: translate(-50%,0);
+    font-size: 19px;
+    line-height: 19px;
+    min-width: 368px;
+}
+.PBBox2{
+    position: absolute;
+    top: 460px;left: 50%;
+    transform: translate(-50%,0);
+    width: 941px;
+    min-width: 800px;
+    /* border: 1px solid black; */
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-around;
+    min-width: 671px;
+}
+.PBBox1 div{
+    width: 24%;height: 158px;
+    border-radius: 5px;
+    float: left;
+    margin: 0px 10px;
+    text-align: center;
+    line-height: 50px;
+}
+.PBBox2 div{
+    width: 24%;height: 158px;
+    border-radius: 5px;
+    margin: 0px 10px;
+    text-align: center;
+    line-height: 50px;
+}
+.PBBox1 div:hover{
+    box-shadow: 0px 0px 2px 2px black;
+    cursor: pointer;
+}
+.PBBox2 div:hover{
+    box-shadow: 0px 0px 2px 2px black;
+    cursor: pointer;
+}
+.PBBox1 img{
+    display: block;
+    margin-top: 10%;margin-left: 50%;
+    transform: translate(-50%,0);
+}
+.PBBox2 img{
+    display: block;
+    margin-top: 10%;margin-left: 50%;
+    transform: translate(-50%,0);
+}
+.PB1{
+    background-color: rgb(82,178,227);
+}
+.PB1 img{
+    margin-top: 6%;
+}
+.PB2{
+    background-color: rgb(171,100,145);
+}
+.PB3{
+    background-color: rgb(130,207,54);
+}
+
+.PB4{
+    background-color: rgb(43,192,167);
+}
+
+.PB5{
+    background-color: rgb(73,203,126);
+}
+
+.PB6{
+    background-color: rgb(134,138,232);
+}
+
+.PB7{
+    background-color: rgb(249,122,116);
+}
+
+.PB8{
+    background-color: rgb(47,154,229);
+}
+/*全网营销*/
+.marking{
+    position: relative;
+    width: 100%;height: 356px;
+    background-color: rgb(20, 36, 52);
+}
+.markingTitle{
+    position: absolute;
+    top: 20px;left: 50%;
+    transform: translate(-50%,0);
+    height: 50px;
+    min-width: 478px;
+    /* border: 1px solid black; */
+}
+.MARKET{
+    font-size:40px;
+    line-height:50px;
+    color: rgb(244,152,0);
+    vertical-align: top;
+}
+.MARKETRight{
+    display: inline-block; 
+}
+.MARKETRight div{
+    display: inline-block;
+    width:5px;height:48px;
+    background-color: rgb(244,152,0);
+    margin-top: 1px;
+    margin-right: 15px;
+    float: left;
+}
+.MARKETRight span{
+    display: inline-block;
+}
+.plan{
+    position: absolute;
+    top:100px;left: 50%;
+    transform: translate(-50%,0);
+    width: 100%;height: 229px;
+    text-align: center;
+    /* border: 1px solid aqua; */
+}
+.planTitle{
+    position: absolute;
+    top:0px;left: 50%;
+    transform: translate(-50%,0px);
+    color: rgb(255, 255, 255);
+    /* border: 1px solid white; */
+    font-size: 18px;
+}
+.planBox{
+    position: absolute;
+    bottom: 55px;left: 50%;
+    transform: translate(-50%,0px);
+    width: 590px;height: 118px;
+    /* border: 1px solid orange; */
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-around;
+}
+.planBox div{
+    border: 2px solid rgb(0, 246, 247);
+    width: 20%;height: 100%;
+    border-radius: 50%;
+}
+.planBox div:hover{
+    box-shadow: 0px 0px 20px 0px white inset;
+    cursor: pointer;
+}
+.planBox span{
+    display: block;
+    width: 20%;height: 2px;
+    background-color: rgb(0, 246, 247);
+    margin-top: 59px;
+}
+.planBox img{
+    display: inline-block;
+    margin-top: 20px;
+}
+.planBoxWord{
+    position: absolute;
+    bottom: 0px;left: 50%;
+    transform: translate(-50%,0);
+    /* border: 1px solid yellow; */
+    width: 590px;height: 55px;  
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-around;
+    align-items: center;  
+}
+.planBoxWord span{
+    display: inline-block;
+    width: 118px;
+    min-width: 118px;
+    text-align: center;
+    color: rgb(255, 255, 255);
+    transition: color 1s;
+}
+/*网站优化*/
+.webOptimize{
+    position: relative;
+    width: 100%;height: 363px;
+    background-color: rgb(206, 50, 100);
+}
+.optimize{
+    position: absolute;
+    top: 15px;left: 50%;
+    transform: translate(-50%,0);
+    width: 100%;height: 90%;
+    /* border: 1px solid black; */
+}
+.WOBox{
+    position: absolute;
+    top: 5px;left: 50%;
+    transform: translate(-50%,0);
+    width: 852px;height: 90%;
+    min-width: 800px;
+    /* border: 1px solid blue; */
+    text-overflow: initial;
+}
+.WOTitle{
+    font-size: 28px;
+    font-weight: bold;
+    color: rgb(255, 255, 255);
+}
+.WOFlex{
+    position: absolute;
+    margin-top: 10px;
+    width: 100%;height: 80%;
+    /* border: 1px solid green; */
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    
+}
+.WOFlex div{
+    position: relative;
+    width: 416px;height: 100%;
+    border: 1px solid yellow;
+    overflow: hidden;
+}
+.WOFlex div:hover{
+    cursor: pointer;
+}
+.WO1{
+    background: url(photo/seo1.png) no-repeat;
+    background-size: 100% 100%;
+}
+.WO2{
+    background: url(photo/sem.png) no-repeat;
+    background-size: 100% 100%;
+}
+.WOdown{
+    position: absolute;
+    bottom: -35px;
+    width: 49%;
+    min-width: 416px;
+    font-size: 14px;
+    color: rgb(255, 255, 255);
+    background-color: rgba(0, 0, 0, 0.226);
+    opacity: 0.9;
+    transition: bottom 1s;
+}
+/*品牌推广*/
+.BrandPromotion{
+    position: relative;
+    width: 100%;height: 577px;
+    background-color: rgb(255, 255, 255);
+}
+.BPBackground{
+    position: absolute;
+    top: 300px;
+    width: 100%;height: 277px;
+    background-color: rgb(220, 220, 220);
+}
+.brand{
+    position: absolute;
+    top: 15px;
+    width: 100%;height: 80%;
+    /* border: 1px solid black; */
+}
+.BPBox{
+    position: absolute;
+    top: 5px;left: 50%;
+    transform: translate(-50%,0px);
+    width: 854px;height: 90%;
+    min-width: 800px;
+    /* border: 1px solid blue;   */
+}
+.BPTitle{
+    font-size: 28px;
+    font-weight: bold;
+}
+.BPFlex{
+    position: absolute;
+    margin-top: 10px;
+    width: 100%;height: 85%;
+    /* border: 1px solid green; */
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    overflow: hidden;
+}
+.BPFlex div{
+    width: 276px;
+    min-width: 276px;
+    height: 100%;
+    border: 1px solid black;
+    background-color: rgb(244, 152, 0);
+    text-align: center;
+    overflow-y: auto;  
+    transition: all 1s linear;
+}
+
+.BPFlex .BPFlex2{
+    background-color: rgb(42, 196, 113);
+}
+.BPFlex img{
+    width: 100%;
+    height: 118px;
+}
+.BPBigletter{
+    display: inline-block;
+    margin: 30px 0px;
+    font-size: 28px;
+    font-weight: bold;
+    color: rgb(255, 255, 255);
+    /* border: 1px solid black; */
+}
+.BPFlex hr{
+    position: relative;
+    left: 50%;
+    transform: translate(-50%,0);
+    width: 60%;
+    border: 0.5px solid rgb(255, 255, 255);
+}
+.BPAtitcle{
+    display: block;
+    position: relative;
+    left: 50%;
+    margin-top: 30px;
+    transform: translate(-50%,0);
+    width: 60%;
+}
+/*特色服务*/
+.featureService{
+    position: relative;
+    width: 100%;height: 352px;
+    background-color: rgb(255, 255, 255);
+}
+.FSTitle{
+    position: absolute;
+    top: 20px;left: 50%;
+    transform: translate(-50%,0);
+    height: 50px;
+}
+.FEATURE{
+    font-size:40px;
+    line-height:50px;
+    color: rgb(20,36,52);
+    vertical-align: top;
+}
+.FEATURERight{
+    display: inline-block; 
+}
+.FEATURERight div{
+    display: inline-block;
+    width:5px;height:48px;
+    background-color: rgb(244,152,0);
+    margin-top: 1px;
+    margin-right: 15px;
+    float: left;
+}
+.FEATURERight span{
+    display: inline-block;
+}
+.feature{
+    position: absolute;
+    top: 100px;left: 50%;
+    transform: translate(-50%,0);
+    width: 100%;height: 70%;
+    /* border: 1px solid black; */
+}
+.FSFlex{
+    position: absolute;
+    top: 5px;left: 50%;
+    transform: translate(-50%,0);
+    width: 913px;height: 90%;
+    min-width: 800px;
+    /* border: 1px solid blue; */
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: center;
+}
+.FSFlex div{
+    width: 178px;height: 90%;
+    /* border: 1px solid green; */
+    margin-right: 20px;
+    font-size: 11px;
+    text-align: center;
+    overflow: hidden;
+    transition: color 300ms;
+    overflow-y: auto;    
+}
+.FSFlex div:nth-child(1){
+    background-color: rgb(134, 138, 232);
+    color: rgb(255, 255, 255);
+}
+.FSFlex div:nth-child(2){
+    background-color: rgb(249, 122, 116);
+    color: rgb(255, 255, 255);
+}
+.FSFlex div:nth-child(3 ){
+    background-color: rgb(171, 100, 145);
+    color: rgb(255, 255, 255);
+}
+.FSFlex .FSTrain{
+    width: 284px;height: 170px;
+    text-align: left;
+    padding-left: 20px;
+    align-items: flex-end;
+}
+.FSTrain ol{
+    list-style: none;
+    padding: 5px 0px;
+}
+.FSTrain li{
+    padding: 5px 0px;
+}
+.FSTrainBtn{
+    display: inline-block;
+    width: 118px;height: 31px;
+    background-color: rgb(244, 152, 0);
+    border-radius: 5px;
+    text-align: center;
+    line-height: 31px;
+    transition: background-color 1s;
+}
+.FSTrainBtn:hover{
+    cursor: pointer;
+}
+.FSFlex img{
+    display: block;
+    position: relative;
+    top: 20px;left: 50%;
+    transform: translate(-50%,0);
+    height: 58px;
+}
+.FSArticle{
+    position: relative;
+    top: 50px;
+}
+
+/*服务优势*/
+.serviceMerit{
+    position: relative;
+    width: 100%;height: 134px;
+    background-color: rgb(20, 36, 52);
+}
+.SMTitle{
+    position: absolute;
+    top: 50%;left: 50%;
+    transform: translate(-50%,-50%);
+    height: 50px;
+}
+.MERIT{
+    font-size: 40px;
+    color: rgb(244, 152, 0);
+    line-height: 50px;
+    vertical-align: top;
+}
+.MERITRight{
+    display: inline-block;
+}
+.MERITRight div{
+    display: inline-block;
+    width:5px;height:48px;
+    background-color: rgb(244,152,0);
+    margin-top: 1px;
+    margin-right: 15px;
+    float: left;
+}
+.MERITRight span{
+    display: inline-block;
+}
+/*优势1*/
+.Merit1{
+    position: relative;
+    width: 100%;height: 237px;
+    background: linear-gradient(to right,rgb(255,159,1),rgb(224, 224, 224));
+}
+.merit1{
+    position: absolute;
+    top: 0px;left: 50%;
+    transform: translate(-50%,0);
+    width: 100%;height: 100%;
+}
+.meritBox1{
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%,0);
+    width: 761px;height: 100%;
+    min-width: 700px;
+    /* border: 1px solid black; */
+    overflow-y: auto;
+}
+.meritBox1 img{
+    display: inline-block;
+    float: right;
+    height: 100%;
+}
+.meritBox1 p{
+    display: inline-block;
+    position: absolute;
+    top: 50%;left: 0px;
+    transform: translate(0,-50%);
+    width: 40%;
+    /* border: 1px solid blue; */
+    font-size: 19px; 
+    font-weight: bold;
+    color: rgb(255, 255, 255);
+}
+.meritBox1 p span{
+    font-size: 14px;
+    font-weight: normal;
+}
+/*优势2*/
+.Merit2{
+    position: relative;
+    top: 15px;
+    width: 100%;height: 237px;
+    background: linear-gradient(to left,rgb(47, 182, 109),rgb(224, 224, 224));
+}
+.merit2{
+    position: absolute;
+    top: 0px;left: 50%;
+    transform: translate(-50%,0);
+    width: 100%;height: 100%;
+}
+.meritBox2{
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%,0);
+    width: 761px;height: 100%;
+    min-width: 700px;
+    /* border: 1px solid black; */
+    overflow-y: auto;
+}
+.meritBox2 img{
+    display: inline-block;
+    float: left;
+    height: 100%;
+}
+.meritBox2 p{
+    display: inline-block;
+    position: absolute;
+    top: 50%;right: 0px;
+    transform: translate(0,-50%);
+    width: 40%;
+    /* border: 1px solid blue; */
+    font-size: 19px; 
+    font-weight: bold;
+    color: rgb(255, 255, 255);
+}
+.meritBox2 p span{
+    font-size: 14px;
+    font-weight: normal;
+}
+/*优势3*/
+.Merit3{
+    position: relative;
+    top: 15px;
+    width: 100%;height: 237px;
+    background: linear-gradient(to right,rgb(255,159,1),rgb(224, 224, 224));   
+}
+.merit3{
+    position: absolute;
+    top: 0px;left: 50%;
+    transform: translate(-50%,0);
+    width: 100%;height: 100%;
+}
+.meritBox3{
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%,0);
+    width: 761px;height: 100%;
+    min-width: 700px;
+    /* border: 1px solid black; */
+    overflow-y: auto;
+}
+.meritBox3 img{
+    display: inline-block;
+    float: right;
+    height: 100%;
+}
+.meritBox3 p{
+    display: inline-block;
+    position: absolute;
+    top: 50%;left: 0px;
+    transform: translate(0,-50%);
+    width: 40%;
+    /* border: 1px solid blue; */
+    font-size: 19px; 
+    font-weight: bold;
+    color: rgb(255, 255, 255);
+}
+.meritBox3 p span{
+    font-size: 14px;
+    font-weight: normal;
+}
+/*优势4*/
+.Merit4{
+    position: relative;
+    top: 15px;
+    width: 100%;height: 237px;
+    background: linear-gradient(to left,rgb(47, 182, 109),rgb(224, 224, 224));
+}
+.merit4{
+    position: absolute;
+    top: 0px;left: 50%;
+    transform: translate(-50%,0);
+    width: 100%;height: 100%;
+}
+.meritBox4{
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%,0);
+    width: 761px;height: 100%;
+    min-width: 700px;
+    /* border: 1px solid black; */
+    overflow-y: auto;
+}
+.meritBox4 img{
+    display: inline-block;
+    float: left;
+    height: 100%;
+}
+.meritBox4 p{
+    display: inline-block;
+    position: absolute;
+    top: 50%;right: 0px;
+    transform: translate(0,-50%);
+    width: 40%;
+    /* border: 1px solid blue; */
+    font-size: 19px; 
+    font-weight: bold;
+    color: rgb(255, 255, 255);
+}
+.meritBox4 p span{
+    font-size: 14px;
+    font-weight: normal;
+}
+/*优势5*/
+.Merit5{
+    position: relative;
+    top: 15px;
+    width: 100%;height: 237px;
+    background: linear-gradient(to right,rgb(255,159,1),rgb(224, 224, 224));   
+}
+.merit5{
+    position: absolute;
+    top: 0px;left: 50%;
+    transform: translate(-50%,0);
+    width: 100%;height: 100%;
+}
+.meritBox5{
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%,0);
+    width: 761px;height: 100%;
+    min-width: 700px;
+    /* border: 1px solid black; */
+    overflow-y: auto;
+}
+.meritBox5 img{
+    display: inline-block;
+    float: right;
+    height: 100%;
+}
+.meritBox5 p{
+    display: inline-block;
+    position: absolute;
+    top: 50%;left: 0px;
+    transform: translate(0,-50%);
+    width: 40%;
+    /* border: 1px solid blue; */
+    font-size: 19px; 
+    font-weight: bold;
+    color: rgb(255, 255, 255);
+}
+.meritBox5 p span{
+    font-size: 14px;
+    font-weight: normal;
+}
+/*企业案例弹框*/
+.caseFrameShadow{
+    z-index: 3;
+    display:block;
+    position: fixed;
+    top:50%;left:-100%;
+    transform: translate(-50%,-50%);
+    z-index: 4;
+    width: 95%;height: 95%;
+    background-color: rgb(49, 49, 52);
+    opacity: 0.8;
+    transition: all 2s;
+}
+.caseFrame{
+    display:block;
+    position: fixed;
+    top:50%;left:-100%;
+    transform: translate(-50%,-50%);
+    z-index: 4;
+    width: 90%;height: 80%;
+    min-width: 800px;
+    min-height: 600px;
+    /* border: 1px solid rgb(13, 176, 95); */
+    border-radius: 5px;
+    color: rgb(255, 255, 255);
+    transition: all 2s;
+}
+.CFTitle{
+    position: relative;
+    top: 20px;left: 50%;
+    transform: translate(-50%,0);
+    width: 347px;height: 79px;
+    /* border: 1px solid red; */
+}
+.CFTitle img{
+    position: absolute;
+    display: inline-block;
+    width: 347px;height: 79px;
+}
+.CFTitle p{
+    font-size: 47px;
+    text-align: center;
+    line-height: 79px;
+}
+.caseFrame span{
+    position: absolute;
+    display: inline-block;
+    top: 20px;right: 50px;
+    font-size: 20px;
+    cursor: pointer;
+}
+.CFContain{
+    position: relative;
+    left: 10%;
+    margin-top: 100px;
+    width: 80%;height: 50%;
+}
+.CFPhoto{
+    position: relative;
+    display: inline-block;
+    background-color: rgb(255, 255, 255);
+    width: 347px;height: 347px;
+}
+.CFPhoto img{
+    position: absolute;
+    top: 50%;left: 50%;
+    transform: translate(-50%,-50%);
+    width: 184px;height: 212px;
+}
+.CFArticle{
+    position: absolute;
+    display: inline-block;
+    font-size: 24px;
+}
+.CFArticle p:nth-child(2){
+    height: 348px;
+    text-indent:48px;
+    overflow-y: scroll;
+}
+.more{
+    position: absolute;
+    right: 5%;bottom: 0;
+    cursor: pointer;
+}
+.more a:link{
+    text-decoration: none;
+    /* color: rgb(255, 255, 255); */
+}
+/*企业案例*/
+.enterpriseCase{
+    position: relative;
+    width: 100%;height: 395px;
+    background-color: rgb(20, 36, 52);
+}
+.ECTitle{
+    position: absolute;
+    top: 20px;left: 50%;
+    transform: translate(-50%,0);
+    height: 50px;
+    min-width: 414px;
+    /* border: 1px solid white; */
+}
+.CASE{
+    font-size: 40px;
+    color: rgb(244, 152, 0);
+    vertical-align: top;
+    line-height: 50px;
+}
+.CASERight{
+    display: inline-block;
+}
+.CASERight div{
+    display: inline-block;
+    width:5px;height:48px;
+    background-color: rgb(244,152,0);
+    margin-top: 1px;
+    margin-right: 15px;
+    float: left;
+}
+.CASERight span{
+    display: inline-block;
+}
+.case{
+    position: absolute;
+    top: 100px;left: 50%;
+    transform: translate(-50%,0);
+    width: 100%;height: 70%;
+    /* border: 1px solid aqua; */
+}
+.ECFlex{
+    position: absolute;
+    top: 5px;left: 50%;
+    transform: translate(-50%,0);
+    width: 800px;height: 100%;
+    /* border: 1px solid yellow; */
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+    align-items: center;
+}
+.ECFlex div{
+    width: 122px;height: 122px;
+    /* border: 1px solid rgb(153, 153, 153); */
+    background-color: rgb(255, 255, 255);
+    border-radius: 50%; 
+    transition: all 500ms;  
+}
+.ECFlex div:hover{
+    cursor: pointer;
+    /* background-color: rgb(244, 152, 0); */
+    box-shadow: 0px 0px 100px rgb(20, 36, 52) inset;
+    
+}
+.ECFlex div img{
+    position: relative;
+    top: 50%;left: 50%;
+    transform: translate(-50%,-50%);
+}
+/*服务套餐*/
+.serviceMenu{
+    position: relative;
+    width: 100%;height: 942px;
+    background-color: rgb(255, 255, 255);
+}
+.menu{
+    position: absolute;
+    top: 0px;left: 50%;
+    transform: translate(-50%,0);
+    width: 100%;height:87%;
+    /* border: 1px solid black;  */
+}
+.SUTitle{
+    position: absolute;
+    top: 20px;left: 50%;
+    transform: translate(-50%,0);
+    min-width: 365px;
+    height: 50px;
+}
+.MENU{
+    font-size:40px;
+    line-height:50px;
+    color: rgb(244,152,0);
+    vertical-align: top;
+}
+.MENURight{
+    display: inline-block; 
+}
+.MENURight div{
+    display: inline-block;
+    width:5px;height:48px;
+    background-color: rgb(244,152,0);
+    margin-top: 1px;
+    margin-right: 15px;
+    float: left;
+}
+.MENURight span{
+    display: inline-block;
+}
+.SUFormTitle{
+    position: absolute;
+    margin-top: 100px;left: 50%;
+    transform: translate(-50%,0);
+    width: 791px;height: 71px;
+    background-color: rgb(244, 156, 0);
+    /* border: 1px solid black; */
+    border-radius: 10px;
+    font-size: 19px;
+    text-align: center;
+    line-height: 71px;
+}
+.SUFormBox{
+    position: absolute;
+    top: 10px;
+    width: 100%;height: 98%;
+    /* border: 1px solid black; */
+    overflow-y: auto;
+}
+.SUForm{
+    position: absolute;
+    margin-top: 171px;left: 50%;
+    transform: translate(-50%,0);
+    width: 791px;height: 620px;
+    min-width: 700px;
+    /* border: 2px solid rgb(46, 182, 109); */
+    border-radius: 10px;
+    font-size: 11px;
+    border-collapse:collapse;
+    box-shadow: 0px 0px 0px 1px rgb(46, 182, 109),0px 0px 10px rgb(0, 0, 0); 
+    
+}
+.SUForm td{
+    padding-left: 10px;
+    padding-top: 0px;
+    margin-left: 0px;
+    border: 2px solid rgb(255, 255, 255);
+    background-color: rgb(220, 220, 220);
+}
+.SUForm input[type=checkbox]{
+    display: none;
+}
+.SUForm input+label{
+    background-color: gray;
+    width:10px;height: 10px;
+    display: inline-block;
+    position: relative;
+    overflow: hidden;
+}
+.SUForm label img{
+    position: absolute;
+    top: -10px;left: -5px;
+    width: 20px;height: 20px;
+    display: none;
+}
+.SUForm input[type=checkbox]:checked+label{
+    overflow: visible;
+}
+.SUForm tr:nth-child(1) td{
+    font-size: 19px;
+    font-weight: bold;
+    border-top: none;
+}
+.SUForm tr td:nth-child(1){
+    font-size: 14px;
+    border-left: none;
+}
+.SUForm tr td:nth-child(3){
+    border-right: none;
+}
+.SUForm tr:nth-child(13) td{
+    border-bottom: none;
+}
+.sendInfo{
+    display: block;
+    position: absolute;
+    bottom: 50px;left: 50%;
+    transform: translate(-50%,0);
+    width: 118px;height: 39px;
+    background-color: rgb(244, 156, 0);
+    border-radius: 5px;
+    color: rgb(255, 255, 255);
+    font-size: 19px;
+    text-align: center;
+    line-height: 39px;
+    box-shadow: 0.5px 1px 0px 0.5px black;
+    transition: all 500ms; 
+}
+.sendInfo:hover{
+    cursor: pointer;
+    color: rgb(223, 223, 223);
+    background-color: rgb(13, 176, 95);
+}
+/*ffooter*/
+footer{
+    position: relative;
+    width: 100%;height: 387px;
+    background-color: rgb(20, 36, 52);
+}
+.foot{
+    position: relative;
+    top: 50%;left: 50%;
+    transform: translate(-50%,-50%);
+    width: 100%;height: 90%;
+    /* border: 1px solid white; */
+    overflow-y: auto;
+}
+.FFlex{
+    position: relative;
+    top: 0;left: 50%;
+    transform: translate(-50%,0);
+    width: 978px;height: 100%;
+    min-width: 800px;
+    /* border: 1px solid aqua; */
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-around;
+    align-items: center;
+}
+.FFlex .Fline{
+    position: relative;
+    width:2px;height: 60%;
+    /* background-color: rgb(102, 102, 102); */
+    background-color: rgba(255, 255, 255, 0.623);
+}
+
+.FPlatForm,.FMap,.FcontactUS{
+    width: 20%;height: 70%;
+    /* border: 1px solid yellow; */
+    color: rgb(153, 153, 153);
+}
+.FattenUS{
+    width: 25%;height: 70%;
+    /* border: 1px solid yellow; */
+    color: rgb(153, 153, 153);
+}
+/*foot服务平台*/
+.FPlatForm{
+    position: relative;
+}
+.FPlatForm p{
+    position: relative;    
+    width: 100%;
+    background-color: rgb(13, 176, 95);
+    color: rgb(216, 216, 216);
+}
+.FPlatForm span{
+    display: block;
+    position: relative;
+    top:5%;
+    margin-bottom: 5%;
+    width: 80%;
+    font-size: 14px;
+}
+.FPlatForm form{
+    position: relative;
+    top: 5%;
+    width: 100%;
+    /* border: 1px solid lightgreen; */
+    vertical-align: top;
+    overflow: hidden;
+}
+.quickSinIn p:nth-child(1){
+    text-align: right;
+    background-color: rgb(255, 255, 255);
+    color: rgb(0, 0, 0);
+    text-shadow: 0px 0px 30px black;
+}
+.quickSinIn p:nth-child(2){
+    text-align: right;
+    background-color: rgb(255, 255, 255);
+    color: rgb(0, 0, 0);
+    margin-top: 10px;
+    text-shadow: 0px 0px 30px black;
+}
+.QLoginBtn{
+    position: relative;
+    margin-top: 10px;left: 20%;transform: translate(-50%,0);
+    width: 50px;    
+    background-color: rgb(244, 156, 0);
+    color: rgb(255, 255, 255);
+    border: none;
+}
+.Qregister{
+    position: absolute;
+    margin-top: 10px;left: 70%;transform: translate(-50%,0);
+    width: 50px;
+    background-color: rgb(244, 156, 0);
+    color: rgb(255, 255, 255);
+    border: none;
+    
+}
+/*foot网站地图*/
+.FMap{
+    background-color: transparent;
+}
+.FMap p{
+    color: rgb(255, 255, 255);
+    font-size: 14px;
+}
+.FMap ul{
+    position: relative;
+    top: 40%;
+    height: 180px;
+    transform: translate(0,-50%);
+    font-size: 12.5px;
+    list-style: none;
+    word-spacing: 10px;
+    letter-spacing: 1px;
+    overflow-y: auto;
+}
+.FMap li{
+    margin-top: 5px;
+}
+/*foot关注我们*/
+.FattenUS{
+    background-color: transparent;
+}
+.FattenUS p{
+    position: relative;
+    color: rgb(255, 255, 255);
+    font-size: 14px; 
+}
+.FattenUS .FUSContain{
+    position: relative;
+    top: 40%;
+    transform: translate(0,-50%);
+    width: 100%;
+    font-size: 8px;
+    line-height: 12px;
+    /* border: 1px solid lightgreen; */
+}
+.FattenUS img{
+    width: 110px;height: 110px;
+    float: left;
+}
+.FUSArticle{
+    display: inline-block;
+    margin-left: 10px;
+    height: 110px;
+    /* border: 1px solid red; */
+    line-height: 21px;
+}
+.FUSLine1{
+    color: rgb(255, 255, 255);
+    font-size: 14px;
+}
+.FUSLine2{
+    color: rgb(255, 255, 255);
+}
+/*foot联系我们*/
+.FcontactUS{
+    background-color: transparent;
+}
+.FcontactUS p{
+    position: relative;
+    color: rgb(255, 255, 255);
+    font-size: 14px;
+}
+.FUS2Contain{
+    position: relative;
+    top: 30%;
+    transform: translate(0,-50%);
+    /* border: 1px solid limegreen; */
+}
+.FUS2Contain div{
+    font-size: 11px;
+    margin-top: 20px;
+}
+.FUS2Contain img{
+    float: left;
+    width: 31px;height: 31px;
+}
+.FUS2Contain span{
+    display: inline-block;
+    margin-left: 10px;
+    text-indent: 0;
+}
+.qqBtn{
+    display: inline-block;
+    color: rgb(255, 255, 255);
+    background-color: rgb(244, 156, 0);
+    transition: all 500ms;
+}
+.qqBtn:hover{
+    background-color: rgb(46,182,109);
+    cursor: pointer;
+}
+.FcopyRight{
+    position: absolute;
+    bottom: 20px;left: 50%;
+    transform: translate(-50%,0);
+    text-align: center;
+    font-size: 12px;
+    color: rgb(153, 153, 153);
+}
